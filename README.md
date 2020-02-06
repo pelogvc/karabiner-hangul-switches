@@ -9,4 +9,4 @@ mac에서 karabiner로 딜레이 없이 한,영,중문 전환
 ## 사용방법
 1. `Finder`에서 `~/.config/karabiner/assets/complex_modifications`로 이동
 2. 다운로드 받은 `switches.json` 파일 추가
-3. `karabiner-elements` > `preference` > `Complex modifications` > `Add rule` 에서 `Enable All`
+3. `karabiner-elements` > `preference` > `Complex modifications` > `Add rule` 에서 필요한 키 `+ Enable`
