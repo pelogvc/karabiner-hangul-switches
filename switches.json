@@ -80,7 +80,7 @@
       ]
     },
     {
-      "description": "lang1 -> 한/영 전환",
+      "description": "lang1(Right alt) -> 한/영 전환",
       "manipulators": [
         {
           "type": "basic",
@@ -221,6 +221,87 @@
           "to": [
             {
               "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            },
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      "description": "lang2(Right control) -> 중국어 전환",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [{ "language": "en" }]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.parallels.desktop",
+                "com.parallels.vm",
+                "com.parallels.desktop.console",
+                "com.parallels.winapp.",
+                "com.microsoft.rdc.macos"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "lang2",
+            "modifiers": { "optional": ["caps_lock"] }
+          },
+          "to": [
+            {
+              "key_code": "lang2",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [{ "language": "ko" }]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.parallels.desktop",
+                "com.parallels.vm",
+                "com.parallels.desktop.console",
+                "com.parallels.winapp.",
+                "com.microsoft.rdc.macos"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "lang2",
+            "modifiers": { "optional": ["caps_lock"] }
+          },
+          "to": [
+            {
+              "key_code": "lang2",
               "lazy": true
             }
           ],
