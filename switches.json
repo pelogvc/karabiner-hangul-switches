@@ -28,12 +28,6 @@
           },
           "to": [
             {
-              "key_code": "right_command",
-              "lazy": true
-            }
-          ],
-          "to_if_alone": [
-            {
               "select_input_source": { "language": "en" }
             }
           ]
@@ -61,12 +55,6 @@
             "modifiers": { "optional": ["caps_lock"] }
           },
           "to": [
-            {
-              "key_code": "right_command",
-              "lazy": true
-            }
-          ],
-          "to_if_alone": [
             {
               "key_code": "spacebar",
               "modifiers": ["left_control", "left_option"]
@@ -237,7 +225,6 @@
         }
       ]
     },
-
 
     {
       "description": "lang2(Right control) -> 중국어 전환",
