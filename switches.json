@@ -320,6 +320,86 @@
     },
 
     {
+      "description": "R_option -> 중국어 전환",
+      "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [{ "language": "en" }]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.parallels.desktop",
+                "com.parallels.vm",
+                "com.parallels.desktop.console",
+                "com.parallels.winapp.",
+                "com.microsoft.rdc.macos"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "right_option",
+            "modifiers": { "optional": ["caps_lock"] }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [{ "language": "ko" }]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.parallels.desktop",
+                "com.parallels.vm",
+                "com.parallels.desktop.console",
+                "com.parallels.winapp.",
+                "com.microsoft.rdc.macos"
+              ]
+            }
+          ],
+          "from": {
+            "key_code": "right_option",
+            "modifiers": { "optional": ["caps_lock"] }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            },
+            {
+              "key_code": "spacebar",
+              "modifiers": ["left_control", "left_option"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
       "description": "R_Option -> 한자/특수문자",
       "manipulators": [
         {
